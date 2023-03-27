@@ -2,13 +2,13 @@
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="DB-223.8214.62">
     <data-source name="PuntoDB" uuid="84fb86a4-b256-43b5-a80e-704d0fa68fff">
-      <database-info product="Mongo DB" version="" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.17" dbms="UNKNOWN" exact-version="0" />
+      <database-info product="Mongo DB" version="6.0.3" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.17" dbms="MONGO" exact-version="6.0.3" exact-driver-version="1.17" />
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <secret-storage>forget</secret-storage>
       <auth-provider>no-auth</auth-provider>
       <schema-mapping>
         <introspection-scope>
-          <node kind="database" negative="1" />
+          <node kind="schema" negative="1" />
         </introspection-scope>
       </schema-mapping>
     </data-source>

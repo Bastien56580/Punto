@@ -1,0 +1,56 @@
+/* CSS pour le fond noir et les couleurs des lettres PUNTO */
+body {
+    background-color: black;
+    text-align: center;
+}
+.punto {
+    display: inline-block;
+    font-size: 50px;
+    font-family: Courier New, monospace;
+}
+.red {
+    color: red;
+}
+.blue {
+    color: blue;
+}
+.yellow {
+    color: yellow;
+}
+.green {
+    color: green;
+}
+/* CSS pour les champs de login et mot de passe */
+.login-form {
+    margin: auto;
+    width: 250px;
+    text-align: left;
+}
+.form-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 4px;
+}
+.form-submit {
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.button{
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

@@ -1,11 +1,33 @@
-version: '3.7'
+version: '3'
 services:
-  mongodb_container:
-    image: mongo:latest
+  mongo:
+    container_name: mongo
+    image: mongo
     ports:
       - "27017:27017"
     volumes:
-      - mongodb_data_container:/data/db
+      - /data/db
 
-volumes:
-  mongodb_data_container:
+  api:
+    build: ./punto-back
+    volumes:
+      - ./punto-back:/home/node/app
+      - /home/node/app/node_modules
+    ports:
+      - "3500:3500"
+    links:
+      - mongo
+    depends_on:
+      - mongo
+
+  front:
+    build: ./punto-front
+    volumes:
+      - ./punto-front:/home/node/app
+      - /home/node/app/node_modules
+    ports:
+      - "3000:3000"
+    links:
+      - api
+    depends_on:
+      - api
