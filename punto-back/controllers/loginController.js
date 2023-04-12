@@ -30,4 +30,4 @@ const loginController = {
 
 }
 
-module.exports = authController;
+module.exports = loginController;

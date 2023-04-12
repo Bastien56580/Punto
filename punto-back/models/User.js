@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
-
+/*
+Création des schémas pour faire entrer les données des utilisateurs dans la base de données
+ */
 const userSchema = new mongoose.Schema({
     username:{
         type: String,
@@ -9,9 +11,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    roles:[{
+    anniversary:[{
         type: String,
-        default: "Joueur"
+        required: true
     }],
     active:{
         type: Boolean,

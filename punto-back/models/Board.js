@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+/*const mongoose = require('mongoose')
 
 const boardSchema = new mongoose.Schema({
     panel:[{
@@ -11,3 +11,4 @@ const boardSchema = new mongoose.Schema({
     }]
 })
 module.exports = mongoose.model('board', boardSchema)
+ */

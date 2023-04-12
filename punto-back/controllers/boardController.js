@@ -4,6 +4,9 @@ const asyncHandler = require('express-async-handler')
 //@desc Get all panel
 //@route Get /panel
 //@access Private
+/*  fonction asynchrone qui récupère tous les utilisateurs dans la base de données
+et renvoie une réponse JSON. Si aucun utilisateur n'est trouvé, elle renvoie une réponse d'erreur.
+ */
 const getBoard = asyncHandler(async (req, res) =>{
     const user = await Panel.find().lean()
     if(!panel?.length){
@@ -15,6 +18,12 @@ const getBoard = asyncHandler(async (req, res) =>{
 //@desc Create new user
 //@route Post /users
 //@access Private
+/*  fonction asynchrone qui crée un nouvel utilisateur dans la base de données en utilisant les données envoyées
+dans le corps de la requête HTTP. Elle effectue des vérifications sur les données entrantes pour s'assurer que toutes
+les informations requises ont été fournies et qu'il n'y a pas de duplicata pour le nom d'utilisateur.
+Si l'opération est réussie, elle renvoie une réponse avec un code 201 et un message de confirmation,
+sinon elle renvoie une réponse d'erreur.
+ */
 const createNewPanel = asyncHandler(async (req, res) =>{
     const { username, password, roles } = req.body
 
@@ -50,6 +59,12 @@ const createNewPanel = asyncHandler(async (req, res) =>{
 //@desc Update user
 //@route PATCH /users
 //@access Private
+/*fonction asynchrone qui met à jour un utilisateur existant dans la base de données en utilisant
+les données envoyées dans le corps de la requête HTTP.
+Elle effectue des vérifications sur les données entrantes pour s'assurer que toutes les informations requises
+ont été fournies et qu'il n'y a pas de duplicata pour le nom d'utilisateur. Si l'opération est réussie
+elle renvoie une réponse avec un message de confirmation, sinon elle renvoie une réponse d'erreur.
+ */
 const updateUser = asyncHandler(async (req, res) =>{
     const { id, username, roles, active, password} = req.body
 
@@ -89,6 +104,11 @@ const updateUser = asyncHandler(async (req, res) =>{
 //@desc Delete user
 //@route Delete /users
 //@access Private
+/* fonction asynchrone qui supprime un utilisateur existant de la base de données en utilisant
+l'ID de l'utilisateur envoyé dans le corps de la requête HTTP. Elle vérifie d'abord si l'utilisateur
+a des notes attribuées, et si c'est le cas, elle renvoie une réponse d'erreur.
+Si l'opération est réussie, elle renvoie une réponse avec un message de confirmation, sinon elle renvoie une réponse d'erreur.
+ */
 const deleteUser = asyncHandler(async (req, res) =>{
     const { id } = req.body
 
